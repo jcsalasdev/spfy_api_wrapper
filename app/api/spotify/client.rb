@@ -5,7 +5,7 @@ module Spotify
         Base_URL = 	"https://api.spotify.com"
         Client_Id = Rails.application.credentials.spotify[:client_id]
         Client_Secret = Rails.application.credentials.spotify[:client_secret]
-        
+
         include Exceptions
 
         def featured_playlists
@@ -37,7 +37,7 @@ module Spotify
             @connection ||= Faraday.new(
                 url: Base_URL,
                 headers: {
-                    "Authorization" => "Bearer BQCAejNGkGnxp0nwCKjBCLHCxOuc7PLl4tQs-V6P--Vqy-N79Tvrbf6kD98tLNqMlyEmaeC2hKPOOusucD7Qqv6JyXJNS2QoqkhjgzM1y4cBTfWSrw4l44opRhjQknAZz0OKdOr79Wqc5XqLY3EiQ6HujkLKM7wLVgxSqLSjcUtNjXN0obmHGDKbxqBDBXkkMhj5NxF62VBVLItVe6m1u_8u"
+                    "Authorization" => "Bearer BQAeXH6LfsmOtpwoA0u4rRnRDWufR3zFXPl84EQX9dAheqd62d_0PSQsNXA26n37Z3VD07kVeI_68LL2PrxnX2VYIqFmbWPcyrxR_uRS-Oo5hNLsDf5v28CfBW3Ho0cL8VlSkU7tBNhXvT5eyu6VDGixitlechwKGaFivUTk4QyFSM6u4RFQshee59RQSJzqTmWQdRCTSgGGP_-0F44armAb"
                 },
             )
         end
