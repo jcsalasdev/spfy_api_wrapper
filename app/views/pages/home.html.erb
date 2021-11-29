@@ -1,0 +1,40 @@
+<div class="container">
+<h1>My Playlist</h1>
+    <div class="album">
+        <% track = @playlist_tracks %>
+        <iframe 
+            src="<%= track.insert(25, 'embed/') %>?utm_source=generator&theme=0" width="95%" height="400" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+        </iframe>
+    </div>
+    <h1>Featured Albums</h1>
+    <div class="album">
+        <% @featured_playlists.first(10).each do |playlist|%>
+                <p class="album-img">
+                    <%=link_to image_tag(playlist["images"][0]["url"],:size => "250x250"), playlist["external_urls"]["spotify"]%>
+                </p>
+        <% end%>
+    </div>
+<h1>Categories</h1>
+    <div class="categories">
+        <% @categories.first(18).each do |category|%>
+            <div class="categories_card" style="background-image: url(<%= category["icons"][0]["url"] %>);">
+            <p class="category_name" ><%= category["name"] %></p>
+            </div> 
+        <% end%>
+    </div> 
+   <h1>New Release</h1>
+    <div class="album new_release">
+    
+ 
+        <% @new_release.first(10).each do |album|%>
+            
+        <iframe class="new_song"
+                src="<%= album["external_urls"]["spotify"].insert(25, 'embed/') %>?utm_source=generator&theme=0" width="45%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+        </iframe>
+        
+        <% end%>
+    </div>
+
+
+</div>  
+

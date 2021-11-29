@@ -1,0 +1,96 @@
+body {
+  color: white;
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.container {
+  margin: 0 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.album {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.categories {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.categories_card {
+  padding: 5px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  margin: 10px;
+  width: 12rem;
+  height: 8rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.category_name {
+  margin: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.24);
+  text-align: center;
+  padding: 5px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 95%;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-radius: 5px;
+}
+
+.album-img {
+  margin: 10px;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.new_song {
+  margin: 5px;
+}
+
+.new_release {
+  margin-top: 1rem;
+  width: 80%;
+  border-radius: 15px;
+  padding: 2rem 0;
+  background: #0f0c29; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #24243e,
+    #302b63,
+    #0f0c29
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #24243e,
+    #302b63,
+    #0f0c29
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
